@@ -8,7 +8,6 @@
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-
       gtag('config', 'G-JK4T1NWQPZ');
     </script>
     <meta charset="UTF-8">
@@ -18,31 +17,57 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Rajdhani:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="css/style.min.css">
 </head>
 
 <body>
+
+    <!-- ✅ ДОБАВЛЕНО: Навигация -->
+    <nav class="navbar">
+        <div class="container navbar_inner">
+            <a href="/" class="navbar_logo"><img src="./img/logo.png" alt="Cosmic Shades"></a>
+            <ul class="navbar_menu">
+                <li><a href="#" data-modal="modal-about">About</a></li>
+                <li><a href="#" data-modal="modal-services">Services</a></li>
+                <li><a href="#" data-modal="modal-clients">Clients</a></li>
+                <li><a href="#" data-modal="modal-contact">Contact</a></li>
+            </ul>
+            <!-- Бургер для мобильных -->
+            <button class="navbar_burger" aria-label="Open menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
     <header class="header">
         <div class="bkg"></div>
-        <div class="container"><a href="" class="logo"><img src="./img/logo.png" alt=""></a>
+        <div class="container">
+            <!-- ✅ ИСПРАВЛЕНО: href был пустым -->
+            <a href="/" class="logo"><img src="./img/logo.png" alt="Cosmic Shades"></a>
             <div class="header_content">
                 <p class="header_text">Experts in international tenders, we provide guarantee and reliability for your
                     success!</p>
+                <!-- ✅ ДОБАВЛЕНО: CTA кнопка -->
+                <a href="#" class="header_cta" data-modal="modal-contact">Contact Us</a>
             </div>
         </div>
     </header>
-    <section class="activity">
+
+    <!-- ✅ ДОБАВЛЕНО: id для якорных ссылок навигации -->
+    <section class="activity" id="activity">
         <div class="container">
-            <h2 class="title">Business Activity</h2><br>
+            <!-- ✅ ИСПРАВЛЕНО: убран <br>, отступ через CSS -->
+            <h2 class="title">Business Activity</h2>
             <p class="activity_text">Cosmic Shades Ltd, headquartered in London, UK, is a full-service supplier of
                 industrial-grade equipment, institutional furnishings, commercial vehicles, and medical technologies. We
                 cater to government entities, industrial companies, laboratories, and educational institutions across
                 the UK and Central Asia, delivering tailored, end-to-end B2B solutions.</p>
         </div>
     </section>
-    <section class="info">
+
+    <section class="info" id="info">
         <div class="container">
             <h2 class="title">What We Do</h2>
             <ul class="info_cart">
@@ -67,7 +92,8 @@
                         <li class="info_cart-item_menu-item">Surgical caps</li>
                         <li class="info_cart-item_menu-item">Shoe covers</li>
                         <li class="info_cart-item_menu-item">Face masks (disposable)</li>
-                    </ul><button class="info_cart-item_btn">Show more</button>
+                    </ul>
+                    <button class="info_cart-item_btn">Show more</button>
                 </li>
                 <li class="info_cart-item"><img src="./img/svg/crane.svg" alt="" class="info_cart-img">
                     <h3 class="info_cart-title">Technical Furniture & Laboratory Infrastructure</h3>
@@ -80,8 +106,8 @@
                         <li class="info_cart-item_menu-item">Mobile tables (various sizes)</li>
                         <li class="info_cart-item_menu-item">Bar tables and round tables</li>
                         <li class="info_cart-item_menu-item">Special table adaptions and arched segments</li>
-                        <li class="info_cart-item_menu-item">System cabinet units (various dimensions)</li><span>Chairs
-                            & Seating</span>
+                        <li class="info_cart-item_menu-item">System cabinet units (various dimensions)</li>
+                        <span>Chairs & Seating</span>
                         <li class="info_cart-item_menu-item">Drawer plan cabinets for drawings</li>
                         <li class="info_cart-item_menu-item">Steel cabinets (with hinged or viewing doors)</li>
                         <li class="info_cart-item_menu-item">Swing door and sliding door cabinets</li>
@@ -94,12 +120,14 @@
                         <li class="info_cart-item_menu-item">Folding whiteboards and flipcharts</li>
                         <li class="info_cart-item_menu-item">Key boxes and coat racks</li>
                         <li class="info_cart-item_menu-item">Soap and paper dispensers</li>
-                        <li class="info_cart-item_menu-item">Fire extinguishers</li><span>Trolleys & Mobile Units</span>
+                        <li class="info_cart-item_menu-item">Fire extinguishers</li>
+                        <span>Trolleys & Mobile Units</span>
                         <li class="info_cart-item_menu-item">Laptop trolleys</li>
                         <li class="info_cart-item_menu-item">PC trolleys</li>
                         <li class="info_cart-item_menu-item">Mobile storage containers (various sizes)</li>
                         <li class="info_cart-item_menu-item">Projector and polystyrene bin trolleys</li>
-                    </ul><button class="info_cart-item_btn">Show more</button>
+                    </ul>
+                    <button class="info_cart-item_btn">Show more</button>
                 </li>
                 <li class="info_cart-item"><img src="./img/svg/excavator.svg" alt="" class="info_cart-img">
                     <h3 class="info_cart-title">Transport & Utility Vehicles</h3>
@@ -111,53 +139,41 @@
                         <li class="info_cart-item_menu-item">Manipulator crane and loading platform</li>
                         <li class="info_cart-item_menu-item">Combined sewage and washing trucks</li>
                         <li class="info_cart-item_menu-item">Emergency repair trucks</li>
-                    </ul><button class="info_cart-item_btn">Show more</button>
+                    </ul>
+                    <button class="info_cart-item_btn">Show more</button>
                 </li>
                 <li class="info_cart-item"><img src="./img/svg/university.svg" alt="" class="info_cart-img">
                     <h3 class="info_cart-title">Educational & Office Furnishings</h3>
                     <p class="info_cart-text">We support universities, schools, and government institutions with
                         complete furniture packages:</p>
                     <ul class="info_cart-item_menu">
-                        <li class="info_cart-item_menu-item">Students’ tables and chairs</li>
-                        <li class="info_cart-item_menu-item">Teachers’ desks and chairs</li>
+                        <li class="info_cart-item_menu-item">Students' tables and chairs</li>
+                        <li class="info_cart-item_menu-item">Teachers' desks and chairs</li>
                         <li class="info_cart-item_menu-item">Faculty office desks</li>
-                        <li class="info_cart-item_menu-item">Conference and dean’s office furniture</li>
+                        <li class="info_cart-item_menu-item">Conference and dean's office furniture</li>
                         <li class="info_cart-item_menu-item">Twin blackboards, trapezoid tables</li>
                         <li class="info_cart-item_menu-item">Freestanding washbasins</li>
                         <li class="info_cart-item_menu-item">Workstations for metal and wood construction training</li>
-                    </ul><button class="info_cart-item_btn">Show more</button>
+                    </ul>
+                    <button class="info_cart-item_btn">Show more</button>
                 </li>
             </ul>
         </div>
-    </section><!-- <section class="team">
-        <div class="container">
-            <h2 class="title">Meet Our Team</h2>
-            <p class="team_subtitle">The smartest people work every day to provide the best service and make our clients
-                happy</p>
-            <ul class="team_menu">
-                <li class="team_menu-item">
-                    <img src="./img/team_1.webp" alt="" class="team_menu-img">
-                    <h3 class="team_menu-name">Max Holden</h3>
-                    <p class="team_menu-role">Founder & Art Director</p>
-                </li>
-                <li class="team_menu-item">
-                    <img src="./img/team_2.webp" alt="" class="team_menu-img">
-                    <h3 class="team_menu-name">Eva Stark</h3>
-                    <p class="team_menu-role">Customer Support</p>
-                </li>
-            </ul>
-        </div>
-    </section> -->
+    </section>
+
     <section class="operate">
         <div class="container">
-            <h2 class="title">Where We Operate</h2><br>
+            <!-- ✅ ИСПРАВЛЕНО: убран <br>, отступ через CSS -->
+            <h2 class="title">Where We Operate</h2>
             <p class="operate_text">Cosmic Shades Ltd operates across the United Kingdom, Uzbekistan, and the broader
                 Central Asian region. We manage procurement, international logistics, customs, local delivery,
                 installation, and commissioning — ensuring a seamless experience for institutional and government
                 buyers.</p>
         </div>
     </section>
-    <section class="clients">
+
+    <!-- ✅ ДОБАВЛЕНО: id для якорной ссылки -->
+    <section class="clients" id="clients">
         <div class="container">
             <h2 class="title">Selected Clients</h2>
             <ul class="clients_menu">
@@ -173,15 +189,24 @@
             </ul>
         </div>
     </section>
-    <footer class="footer">
-        <div class="container"><a href="mailto:cosmicshades@outlook.com"
-                class="footer_email">cosmicshades@outlook.com</a>
-            <p class="footer_address">20 Wenlock road, London</p><a href="tel: +447429990817"
-                class="footer_phone">+447429990817</a>
+
+    <!-- ✅ ДОБАВЛЕНО: id для якорной ссылки -->
+    <footer class="footer" id="footer">
+        <div class="container">
+            <a href="mailto:cosmicshades@outlook.com" class="footer_email">cosmicshades@outlook.com</a>
+            <p class="footer_address">20 Wenlock road, London</p>
+            <a href="tel:+447429990817" class="footer_phone">+447429990817</a>
+            <!-- ✅ ДОБАВЛЕНО: копирайт -->
+            <p class="footer_copy">© 2025 Cosmic Shades Ltd. All rights reserved.</p>
         </div>
     </footer>
+
+    <!-- MODALS -->
+    <div class="modal" id="modal-about"><div class="modal_overlay"></div><div class="modal_box"><button class="modal_close">&times;</button><h2 class="modal_title">About Us</h2><p class="modal_text">Cosmic Shades Ltd, headquartered in London, UK, is a full-service supplier of industrial-grade equipment, institutional furnishings, commercial vehicles, and medical technologies. We cater to government entities, industrial companies, laboratories, and educational institutions across the UK and Central Asia, delivering tailored, end-to-end B2B solutions.</p></div></div>
+    <div class="modal" id="modal-services"><div class="modal_overlay"></div><div class="modal_box"><button class="modal_close">&times;</button><h2 class="modal_title">What We Do</h2><ul class="modal_list"><li><strong>Veterinary &amp; Medical Equipment</strong> — Anesthesia machines, diagnostic devices, protective clothing.</li><li><strong>Technical Furniture &amp; Lab Infrastructure</strong> — Lab tables, workbenches, cabinets, shelving.</li><li><strong>Transport &amp; Utility Vehicles</strong> — Trucks, crane vehicles, sewage trucks.</li><li><strong>Educational &amp; Office Furnishings</strong> — Student furniture, conference sets, blackboards.</li></ul></div></div>
+    <div class="modal" id="modal-clients"><div class="modal_overlay"></div><div class="modal_box"><button class="modal_close">&times;</button><h2 class="modal_title">Selected Clients</h2><ul class="modal_list"><li>Premier United LLC</li><li>JV Ifoda Agro Kimyo Himoya</li><li>Sunshine Industrial Technology LLC</li></ul></div></div>
+    <div class="modal" id="modal-contact"><div class="modal_overlay"></div><div class="modal_box"><button class="modal_close">&times;</button><h2 class="modal_title">Contact Us</h2><ul class="modal_contacts"><li><span>Email:</span> <a href="mailto:cosmicshades@outlook.com">cosmicshades@outlook.com</a></li><li><span>Address:</span> 20 Wenlock Road, London</li><li><span>Phone:</span> <a href="tel:+447429990817">+447429990817</a></li></ul></div></div>
     <script src="js/script.min.js"></script>
 </body>
-
 
 </html>
