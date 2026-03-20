@@ -117,7 +117,7 @@ ul { list-style: none; }
     font-family: 'Bebas Neue', sans-serif;
     font-size: 18px;
     letter-spacing: 0.1em;
-    color: #000000;
+    color: #c4a882;
     -webkit-transition: color 0.25s ease;
     transition: color 0.25s ease;
     position: relative;
@@ -660,42 +660,53 @@ ul { list-style: none; }
 /* ---- HIDDEN (team) ---- */
 .team { display: none !important; }
 
-/* ---- RESPONSIVE ---- */
+/* ============================================
+   RESPONSIVE — ALL DEVICES
+   320px  — small phones (iPhone SE)
+   390px  — iPhone 14 / modern phones
+   520px  — large phones
+   768px  — tablets portrait
+   1024px — tablets landscape / small laptops
+   1280px — laptops
+   1440px — desktop
+   1920px — large screens / TV
+   ============================================ */
+
+/* ---- BASE CONTAINER ---- */
 @media (max-width: 1440px) {
     .container { padding-left: 25px; padding-right: 25px; }
-    .info_cart { -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; }
+    .info_cart { justify-content: center; }
 }
 
-/* ✅ Планшет — строго 2 карточки в ряд, никогда не одна */
-@media (max-width: 1100px) {
+/* ---- LARGE SCREENS / TV (1920px+) ---- */
+@media (min-width: 1920px) {
+    .container { max-width: 1700px; }
+    .title { font-size: 70px; }
+    .header_text { font-size: 52px; }
+    .activity_text, .operate_text { font-size: 22px; max-width: 700px; }
+    .info_cart-item { max-width: 380px; }
+}
+
+/* ---- LAPTOP / DESKTOP (1024–1440px) ---- */
+@media (max-width: 1280px) {
+    .info_cart-item { max-width: 300px; }
+}
+
+/* ---- TABLET LANDSCAPE (900–1024px) ---- */
+@media (max-width: 1024px) {
     .info_cart-item {
         max-width: calc(50% - 12px);
         width: calc(50% - 12px);
     }
+    .title { font-size: 48px; }
+    .activity { padding: 80px 0 90px; }
+    .operate { padding: 80px 0 90px; }
+    .info { padding: 80px 0; }
+    .clients { padding: 80px 0; }
+    .footer { padding: 60px 0; }
 }
 
-/* ✅ Маленький планшет — всё ещё 2 в ряд */
-@media (max-width: 768px) {
-    .info_cart-item {
-        max-width: calc(50% - 10px);
-        width: calc(50% - 10px);
-    }
-    .info_cart {
-        gap: 16px;
-    }
-}
-
-/* ✅ Телефон — 1 карточка на всю ширину */
-@media (max-width: 520px) {
-    .info_cart-item {
-        max-width: 100%;
-        width: 100%;
-    }
-    .info_cart {
-        gap: 16px;
-    }
-}
-
+/* ---- NAVBAR BURGER (900px) ---- */
 @media (max-width: 900px) {
     .navbar_menu {
         display: none;
@@ -703,14 +714,16 @@ ul { list-style: none; }
         top: 100%;
         left: 0;
         width: 100%;
-        background: #141414;
+        background: rgba(168, 125, 84, 0.99);
         -webkit-box-orient: vertical;
         -webkit-box-direction: normal;
         -ms-flex-direction: column;
         flex-direction: column;
         gap: 0;
-        border-top: 1px solid var(--border);
+        border-top: 1px solid rgba(255,255,255,0.15);
         padding: 8px 0;
+        -webkit-box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+        box-shadow: 0 10px 30px rgba(0,0,0,0.4);
     }
     .navbar_menu.open {
         display: -webkit-box;
@@ -720,21 +733,106 @@ ul { list-style: none; }
     .navbar_menu li { padding: 0 25px; }
     .navbar_menu a {
         display: block;
-        padding: 12px 0;
-        border-bottom: 1px solid var(--border);
-        font-size: 20px;
+        padding: 14px 0;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+        font-size: 22px;
+        color: #fff;
     }
+    .navbar_menu a:last-child { border-bottom: none; }
     .navbar_burger {
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
     }
 }
-@media (max-width: 767px) {
+
+/* ---- TABLET PORTRAIT (768px) ---- */
+@media (max-width: 768px) {
     .header { height: auto; min-height: 100vh; }
     .title { font-size: 42px; }
+    .header_text { font-size: 28px; }
+
+    .info_cart {
+        gap: 16px;
+    }
+    .info_cart-item {
+        max-width: calc(50% - 8px);
+        width: calc(50% - 8px);
+        padding: 30px 20px;
+    }
+
+    .activity { padding: 70px 0 80px; }
+    .operate  { padding: 70px 0 80px; }
+    .info     { padding: 70px 0; }
+    .clients  { padding: 70px 0; }
+    .footer   { padding: 50px 0; }
+
+    .clients_menu-item { padding: 18px 24px; }
+
+    .modal_box { padding: 40px 28px; }
+    .modal_title { font-size: 26px; }
 }
-@media (max-width: 676px) {
-    .header_text { font-size: 30px; }
-    .header_cta { padding: 12px 32px; font-size: 18px; }
+
+/* ---- LARGE PHONES (520–767px) ---- */
+@media (max-width: 520px) {
+    .info_cart-item {
+        max-width: 100%;
+        width: 100%;
+    }
+    .info_cart { gap: 14px; }
+
+    .title { font-size: 36px; }
+    .header_text { font-size: 24px; }
+    .header_cta { padding: 12px 30px; font-size: 17px; }
+
+    .activity_text, .operate_text { font-size: 16px; }
+
+    .footer_email { font-size: 18px; }
+    .footer_address { font-size: 14px; margin: 20px auto; }
+}
+
+/* ---- PHONES (390px — iPhone 14 / modern) ---- */
+@media (max-width: 390px) {
+    .container { padding-left: 16px; padding-right: 16px; }
+
+    .title { font-size: 32px; }
+    .header_text { font-size: 21px; letter-spacing: 0.03em; }
+    .header_cta { padding: 11px 26px; font-size: 16px; }
+
+    .info_cart-item { padding: 24px 16px; }
+    .info_cart-title { font-size: 18px; }
+    .info_cart-text { font-size: 13px; }
+
+    .activity { padding: 55px 0 65px; }
+    .operate  { padding: 55px 0 65px; }
+    .info     { padding: 55px 0; }
+    .clients  { padding: 55px 0; }
+    .footer   { padding: 40px 0; }
+
+    .clients_menu-item { padding: 14px 16px; }
+    .clients_menu-title { font-size: 16px; }
+
+    .modal_box { padding: 32px 20px; }
+    .modal_title { font-size: 22px; }
+    .modal_text { font-size: 14px; }
+    .modal_list li { font-size: 13px; padding: 10px 14px; }
+    .modal_contacts li { font-size: 14px; padding: 10px 14px; }
+    .modal_contacts span { min-width: 65px; font-size: 14px; }
+
+    .navbar_logo { width: 65px; }
+}
+
+/* ---- SMALL PHONES (320px — iPhone SE) ---- */
+@media (max-width: 320px) {
+    .container { padding-left: 12px; padding-right: 12px; }
+
+    .title { font-size: 28px; }
+    .header_text { font-size: 18px; }
+    .header_cta { padding: 10px 22px; font-size: 15px; }
+
+    .info_cart-item { padding: 20px 14px; }
+    .info_cart-title { font-size: 16px; }
+
+    .footer_email { font-size: 15px; }
+    .footer_phone { font-size: 14px; }
 }
