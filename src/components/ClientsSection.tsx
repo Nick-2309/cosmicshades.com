@@ -13,8 +13,8 @@ export const ClientsSection = () => (
       <div className="mt-10 flex flex-col gap-4">
         {CLIENTS.map((c, i) => (
           <GlowCard key={i} className="p-5 px-10 w-full">
-            <div className="relative z-10 text-left">
-              <h3 className="font-display text-xl tracking-wider text-foreground">{c}</h3>
+            <div className="relative z-10 text-center">
+              <h3 className="font-display text-sl tracking-wider text-foreground">{c}</h3>
             </div>
           </GlowCard>
         ))}

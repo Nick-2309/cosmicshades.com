@@ -18,7 +18,7 @@ export const Navbar = ({ onOpenModal }: NavbarProps) => {
   return (
     <nav className="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[calc(100%-2rem)] max-w-[900px] flex items-center gap-3">
       {/* Separate Logo */}
-      <div className="w-11 h-11 rounded-full bg-card border border-border shadow-lg shadow-black/30 flex items-center justify-center shrink-0">
+      <div className="hidden md:flex w-11 h-11 rounded-full bg-card border border-border shadow-lg shadow-black/30 flex items-center justify-center shrink-0">
         <span className="font-display text-sm text-primary-foreground leading-none tracking-wider">CS</span>
       </div>
 
@@ -43,7 +43,7 @@ export const Navbar = ({ onOpenModal }: NavbarProps) => {
           href="https://cosmicshades.com"
           target="_blank"
           rel="noopener noreferrer"
-          className="hidden md:block font-body text-sm text-foreground hover:text-accent transition-colors shrink-0"
+          className="md:block font-body text-sm text-foreground hover:text-accent transition-colors shrink-0"
         >
           cosmicshades.com
         </a>
