@@ -2,7 +2,7 @@ import { GlowCard } from "@/components/ui/spotlight-card";
 
 
 export const Footer = () => (
-  <footer className="py-20 text-center border-t-[3px] border-t-accent">
+  <footer className="py-20 px-4 text-center border-t-[3px] border-t-accent">
     <GlowCard className="max-w-[1440px] w-full mx-auto px-6 py-12">
       <a href="mailto:cosmicshades@outlook.com" className="font-display text-[22px] tracking-wider text-accent hover:text-primary-foreground transition-colors">
         cosmicshades@outlook.com
